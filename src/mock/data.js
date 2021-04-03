@@ -51,12 +51,23 @@ export const projectsData = [
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
-    info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    img: 'project__stretches.jpg',
+    title: 'Stretch Timer',
+    info:
+      'This offers timers for several stretch routines, where the subsequent move for each routine automatically appears with a fresh timer.',
+    info2: 'HTML, CSS/Sass, JavaScript',
+    url: 'https://mcksheridan.com/projects/stretches/',
+    repo: 'https://github.com/mcksheridan/stretches', // if no repo, the button will not show up
+  },
+  {
+    id: nanoid(),
+    img: 'project__tiktokvideoinfo.jpg',
+    title: 'TikTok Video Information API',
+    info:
+      'This API builds off of the existing official TikTok API to serve users information about the date a video was added and its ID number',
+    info2: 'NodeJs, Express, JavaScript',
+    url: 'https://tiktok-video-info.herokuapp.com/',
+    repo: 'https://github.com/mcksheridan/tiktok-video-info', // if no repo, the button will not show up
   },
 ];
 
