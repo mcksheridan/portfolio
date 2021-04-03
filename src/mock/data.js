@@ -41,12 +41,13 @@ export const projectsData = [
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
-    info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    img: 'project__idioms.jpg',
+    title: 'Idioms',
+    info:
+      'This website uses two APIs, one to offer a Japanese idiom and its pronounciation and the other to provide information about the weather to use for a dynamic background.',
+    info2: 'HTML, CSS/Sass, JavaScript',
+    url: 'https://mcksheridan.com/projects/idioms/',
+    repo: 'https://github.com/mcksheridan/idioms', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
