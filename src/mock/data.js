@@ -18,10 +18,13 @@ export const heroData = {
 // ABOUT DATA
 export const aboutData = {
   img: 'profile.jpg',
-  paragraphOne: '',
-  paragraphTwo: '',
-  paragraphThree: '',
-  resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
+  paragraphOne:
+    'I started studying web development in elementary school, after I decided I wanted to make a website. I started by learning HTML and CSS and kept this up as a hobby for years. In college, I took several computer science classes and began learning JavaScript. More recently, I transitioned into working with both the front end and the back end to become a full stack developer.',
+  paragraphTwo:
+    'In January 2021, I began working as a Full Stack Apprentice. Becoming a member of a team after years of being a solo hobbyist has been incredibly energizing. Some of the valuable lessons I have learned so far include using git and source control, relying less on GUI and more on the command line, refactoring existing code, handling technical debt, and understanding programming paradigms like functional programming and object oriented programming.',
+  paragraphThree:
+    'The apprenticeship, as well as my work, relies primarily on JavaScript. My work features HTML, CSS (with BEM and Sass), and JavaScript (including Nodejs and Express).',
+  // resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
 };
 
 // PROJECTS DATA
