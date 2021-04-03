@@ -31,12 +31,13 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
-    info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    img: 'project__page-counter.jpg',
+    title: 'Page Counter',
+    info:
+      'This is a bilingual page counter that operates in both English and Japanese. Users input text and receive an estimate of how many pages the text would occupy, based on either a word count (English) or a character count (Japanese).',
+    info2: 'Languages/Tools: HTML, CSS/Sass, JavaScript',
+    url: 'https://mcksheridan.com/projects/word_counter/',
+    repo: 'https://github.com/mcksheridan/word_counter', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
