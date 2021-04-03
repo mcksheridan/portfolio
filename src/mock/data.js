@@ -57,9 +57,9 @@ export const projectsData = [
 
 // CONTACT DATA
 export const contactData = {
-  cta: '',
-  btn: '',
-  email: '',
+  cta: "Feel free to reach out with any inquiries. Let's start a conversation.",
+  btn: 'Email Me',
+  email: 'mcksheridan@gmail.com',
 };
 
 // FOOTER DATA
