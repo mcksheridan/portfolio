@@ -44,9 +44,9 @@ export const projectsData = [
     img: 'project__idioms.jpg',
     title: 'Idioms',
     info:
-      'This website uses two APIs, one to offer a Japanese idiom and its pronounciation and the other to provide information about the weather to use for a dynamic background.',
-    info2: 'HTML, CSS/Sass, JavaScript',
-    url: 'https://mcksheridan.com/projects/idioms/',
+      'This web application creates a web scraping REST API on the server side and consumes it on the client side to display information about the weather and Japanese idioms.',
+    info2: 'HTML, CSS/Sass, JavaScript, Express.js',
+    url: 'https://idioms.mcksheridan.com/',
     repo: 'https://github.com/mcksheridan/idioms', // if no repo, the button will not show up
   },
   {
