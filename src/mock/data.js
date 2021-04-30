@@ -31,13 +31,13 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'project__page-counter.jpg',
-    title: 'Page Counter',
+    img: 'project__stretches.jpg',
+    title: 'Stretch Timer',
     info:
-      'This is a bilingual page counter that operates in both English and Japanese. Users input text and receive an estimate of how many pages the text would occupy, based on either a word count (English) or a character count (Japanese).',
-    info2: 'HTML, CSS/Sass, JavaScript',
-    url: 'https://mcksheridan.com/projects/word_counter/',
-    repo: 'https://github.com/mcksheridan/word_counter', // if no repo, the button will not show up
+      'Users can create timed exercise routines and use the built-in timer to run through their own routines, as well as routines from other users.',
+    info2: 'JavaScript, Express.js, Pug, SCSS',
+    url: 'https://stretches.mcksheridan.com/',
+    repo: 'https://github.com/mcksheridan/stretches', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
@@ -51,24 +51,33 @@ export const projectsData = [
   },
   {
     id: nanoid(),
-    img: 'project__stretches.jpg',
-    title: 'Stretch Timer',
+    img: 'project__page-counter.jpg',
+    title: 'Page Counter',
     info:
-      'This offers timers for several stretch routines, where the subsequent move for each routine automatically appears with a fresh timer.',
+      'This is a bilingual page counter that operates in both English and Japanese. Users input text and receive an estimate of how many pages the text would occupy, based on either a word count (English) or a character count (Japanese).',
     info2: 'HTML, CSS/Sass, JavaScript',
-    url: 'https://mcksheridan.com/projects/stretches/',
-    repo: 'https://github.com/mcksheridan/stretches', // if no repo, the button will not show up
+    url: 'https://mcksheridan.com/projects/word_counter/',
+    repo: 'https://github.com/mcksheridan/word_counter', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
-    img: 'project__tiktokvideoinfo.jpg',
-    title: 'TikTok Video Information API',
-    info:
-      'This API builds off of the existing official TikTok API to serve users information about the date a video was added and its ID number',
-    info2: 'NodeJs, Express, JavaScript',
-    url: 'https://tiktok-video-info.herokuapp.com/',
-    repo: 'https://github.com/mcksheridan/tiktok-video-info', // if no repo, the button will not show up
+    img: 'project__avoid-duplicates.jpg',
+    title: 'Duplicate Word Checker',
+    info: 'Command line tool to examine an Excel document for duplicate entries in a column',
+    info2: 'Python, openpyxl, CLI',
+    url: 'https://github.com/mcksheridan/avoid_duplicates',
+    repo: 'https://github.com/mcksheridan/avoid_duplicates', // if no repo, the button will not show up
   },
+  // {
+  //   id: nanoid(),
+  //   img: 'project__tiktokvideoinfo.jpg',
+  //   title: 'TikTok Video Information API',
+  //   info:
+  //     'This API builds off of the existing official TikTok API to serve users information about the date a video was added and its ID number',
+  //   info2: 'NodeJs, Express, JavaScript',
+  //   url: 'https://tiktok-video-info.herokuapp.com/',
+  //   repo: 'https://github.com/mcksheridan/tiktok-video-info', // if no repo, the button will not show up
+  // },
 ];
 
 // CONTACT DATA
