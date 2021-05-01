@@ -36,7 +36,7 @@ export const projectsData = [
     info:
       'Users can create timed exercise routines and use the built-in timer to run through their own routines, as well as routines from other users.',
     info2: 'JavaScript, Express.js, Pug, SCSS',
-    url: 'https://stretches.mcksheridan.com/',
+    url: 'http://stretches.mcksheridan.com/',
     repo: 'https://github.com/mcksheridan/stretches', // if no repo, the button will not show up
   },
   {
@@ -65,7 +65,7 @@ export const projectsData = [
     title: 'Duplicate Word Checker',
     info: 'Command line tool to examine an Excel document for duplicate entries in a column',
     info2: 'Python, openpyxl, CLI',
-    url: 'https://github.com/mcksheridan/avoid_duplicates',
+    url: 'https://replit.com/@mcksheridan/avoidduplicates',
     repo: 'https://github.com/mcksheridan/avoid_duplicates', // if no repo, the button will not show up
   },
   // {
