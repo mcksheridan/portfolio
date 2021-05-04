@@ -27,6 +27,9 @@ const Projects = () => {
       <Container>
         <div className="project-wrapper">
           <Title title="Projects" />
+          <p className="project-wrapper__heroku-warning">
+            Projects deployed on Heroku might be sleeping and could require extra time to load.
+          </p>
           {projects.map((project) => {
             const { title, info, info2, url, repo, img, id } = project;
 
