@@ -35,7 +35,7 @@ export const projectsData = [
     title: 'Stretch Timer',
     info:
       'Users can create timed exercise routines and use the built-in timer to run through their own routines, as well as routines from other users.',
-    info2: 'JavaScript, Express.js, Pug, SCSS',
+    info2: 'JavaScript, Express.js, Pug, SCSS, Heroku',
     url: 'http://stretches.mcksheridan.com/',
     repo: 'https://github.com/mcksheridan/stretches', // if no repo, the button will not show up
   },
@@ -45,7 +45,7 @@ export const projectsData = [
     title: 'Idioms',
     info:
       'This web application creates a web scraping REST API on the server side and consumes it on the client side to display information about the weather and Japanese idioms.',
-    info2: 'HTML, CSS/Sass, JavaScript, Express.js',
+    info2: 'HTML, CSS/Sass, JavaScript, Express.js, Heroku',
     url: 'https://idioms.mcksheridan.com/',
     repo: 'https://github.com/mcksheridan/idioms', // if no repo, the button will not show up
   },
@@ -55,7 +55,7 @@ export const projectsData = [
     title: 'Page Counter',
     info:
       'This is a bilingual page counter that operates in both English and Japanese. Users input text and receive an estimate of how many pages the text would occupy, based on either a word count (English) or a character count (Japanese).',
-    info2: 'HTML, CSS/Sass, JavaScript',
+    info2: 'HTML, CSS/Sass, JavaScript, FTP',
     url: 'https://mcksheridan.com/projects/word_counter/',
     repo: 'https://github.com/mcksheridan/word_counter', // if no repo, the button will not show up
   },
