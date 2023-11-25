@@ -17,3 +17,7 @@ export type SectionType = {
   id: string,
   children: ReactNode,
 }
+
+export type NavigationType = {
+  sections: SectionType[],
+}
