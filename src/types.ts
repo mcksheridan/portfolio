@@ -11,8 +11,7 @@ export type ProjectType = {
   },
 }
 
-export type SectionType = {
-  headingLevel?: 'h1' | 'h2',
+export type SectionProps = {
   title: string,
   id: string,
   children: ReactNode,

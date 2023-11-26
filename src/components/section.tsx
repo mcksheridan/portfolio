@@ -1,10 +1,10 @@
 import React from "react";
-import type { SectionType } from "../types";
+import type { SectionProps } from "../types";
 
-const Section = ({ headingLevel, title, id, children }: SectionType) => {
+const Section = ({ title, id, children }: SectionProps) => {
   return (
     <section id={id}>
-      {headingLevel === 'h1' ? <h1>{title}</h1> : <h2>{title}</h2>}
+      <h2>{title}</h2>
       {children}
     </section>
   )
