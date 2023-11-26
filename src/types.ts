@@ -21,3 +21,13 @@ export type SectionType = {
 export type NavigationType = {
   sections: SectionType[],
 }
+
+export type SocialMediaProps = {
+  title: string,
+  url: string,
+  icon?: string,
+}
+
+export type SocialMediaCollectionProps = {
+  socialMedia: SocialMediaProps []
+}
