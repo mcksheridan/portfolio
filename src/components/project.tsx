@@ -1,7 +1,7 @@
 import React from "react";
-import type { ProjectType } from "../types";
+import type { ProjectProps } from "../types";
 
-const Project = ({ title, image, description, techStack, links }: ProjectType) => {
+const Project = ({ title, image, description, techStack, links }: ProjectProps) => {
   return (
     <article>
       <div>

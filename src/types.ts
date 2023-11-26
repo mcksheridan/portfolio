@@ -1,6 +1,6 @@
 import type { ReactElement, ReactNode } from "react"
 
-export type ProjectType = {
+export type ProjectProps = {
   title: string,
   image: string,
   description: string,
