@@ -18,8 +18,8 @@ export type SectionType = {
   children: ReactNode,
 }
 
-export type NavigationType = {
-  sections: SectionType[],
+export type NavigationProps = {
+  sections: SectionProps[],
 }
 
 export type SocialMediaProps = {

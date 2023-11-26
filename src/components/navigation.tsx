@@ -1,7 +1,7 @@
 import React from "react";
-import { NavigationType } from "../types";
+import { NavigationProps } from "../types";
 
-const Navigation = ({ sections }: NavigationType) => {
+const Navigation = ({ sections }: NavigationProps) => {
   return (
     <nav>
       <ul>
