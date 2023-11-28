@@ -418,6 +418,10 @@ ol, ul {
   .intro__cta {
     margin-inline: auto;
   }
+
+  .project {
+    grid-column-gap: var(--s-xl)
+  }
 }
 
 /* Utilities */
