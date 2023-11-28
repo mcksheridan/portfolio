@@ -60,10 +60,11 @@ export default function Home() {
         <Navigation sections={SECTION_DATA} />
       </header>
       <main className="content">
-        <section>
-          <h1>Hello, I'm Sheridan</h1>
-          <p>I'm a front end developer</p>
-          <p><a href={`#${SECTION_DATA[0].id}`}>Learn More</a></p>
+        <section className="intro">
+          <h1 className="intro__heading">Hello, I'm Sheridan</h1>
+          <p className="intro__descr">I'm a front end developer
+            <a href={`#${SECTION_DATA[0].id}`} className="link-button intro__cta">Learn More</a>
+          </p>
         </section>
         {SECTION_DATA.map((section) => <Section key={section.id} {...section} />)}
       </main>

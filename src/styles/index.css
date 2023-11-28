@@ -3,7 +3,7 @@
   /* (b)reakpoints */
   --b-xsm: 18.75rem;
   --b-sm: 40rem;
-  --b-med: 52rem;
+  --b-med: 55rem;
   --b-lg: 112rem;
 
   /* (c)olors */
@@ -140,6 +140,45 @@ ol, ul {
   padding-top: var(--d-header-height);
 }
 
+.intro {
+  padding-block: 35vh;
+}
+
+.intro__heading {
+  font-family: 'Calligraffitti', sans-serif;
+  font-size: clamp(2rem, 0.2353rem + 9.4118vw, 4rem);
+}
+
+.intro__heading,
+.intro__descr {
+  margin-block: 0;
+}
+
+.intro__cta {
+  display: block;
+  margin-block-start: var(--s-med);
+  width: fit-content;
+}
+
+.link-button {
+  background: var(--c-accent);
+  border: 1px solid var(--c-neutral-dark);
+  border-radius: 2rem;
+  font-weight: bold;
+  padding: var(--s-sm);
+}
+
+.link-button:link,
+.link-button:visited,
+.link-button:hover {
+  color: var(--c-neutral-dark);
+  text-decoration: none;
+}
+
+.link-button:active {
+  color: var(--c-neutral-light);
+}
+
 @media (min-width: 40rem) {
   .header {
     grid-template-areas: "logo nav";
@@ -203,6 +242,14 @@ ol, ul {
 
   .content {
     padding-inline: var(--s-lg);
+  }
+
+  .intro {
+    text-align: center;
+  }
+
+  .intro__cta {
+    margin-inline: auto;
   }
 }
 
