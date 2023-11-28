@@ -24,9 +24,9 @@ const SECTION_DATA: SectionProps[] = [
         and Next.js.
       </p>
       <p>
-        Feel free to reach out and connect. I'm always open
-        to opportunities to learn, grow, and collaborate with
-        others.
+        Feel free to <a href="#contact" className="link">reach
+        out</a> and connect. I'm always open to opportunities to
+        learn, grow, and collaborate with others.
       </p>
     </>
   },
