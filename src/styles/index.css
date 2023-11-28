@@ -23,6 +23,10 @@
   --s-med: 1rem;
   --s-sm: 0.5rem;
   --s-lg: 2rem;
+  --s-xl: 5rem;
+
+  /* other */
+  --accent-font: 'Calligraffitti', sans-serif;
 }
 
 /* Tools */
@@ -166,6 +170,7 @@ ol, ul {
 }
 
 .section__heading {
+  font-family: var(--accent-font);
   margin-block-start: 0;
   text-decoration: underline;
   text-decoration-color: var(--c-monogram-bg);
@@ -178,11 +183,11 @@ ol, ul {
 }
 
 .intro {
-  padding-block: 35vh;
+  padding-block: 38vh;
 }
 
 .intro__heading {
-  font-family: 'Calligraffitti', sans-serif;
+  font-family: var(--accent-font);
   font-size: clamp(2rem, 0.2353rem + 9.4118vw, 4rem);
 }
 
@@ -194,7 +199,6 @@ ol, ul {
 .intro__cta {
   display: block;
   margin-block-start: var(--s-med);
-  width: fit-content;
 }
 
 .link-button {
@@ -203,6 +207,7 @@ ol, ul {
   border-radius: 2rem;
   font-weight: bold;
   padding: var(--s-sm);
+  width: fit-content;
 }
 
 .link-button:link,
@@ -214,6 +219,47 @@ ol, ul {
 
 .link-button:active {
   color: var(--c-neutral-light);
+}
+
+.project {
+  margin-block-end: var(--s-xl);
+}
+
+.project__image-wrapper {
+  margin-inline: 0;
+}
+
+.project__image {
+  max-width: 25rem;
+  width: 100%;
+}
+
+.project__subheading {
+  margin-block-end: 0;
+}
+
+.project__subheading:after {
+  content: ':'
+}
+
+.project__links > a:nth-child(2) {
+  margin-inline-start: var(--s-sm);
+}
+
+.techstack {
+  margin-block-end: var(--s-med);
+}
+
+.techstack__tech {
+  --border-radius: 0.5rem;
+
+  background: white;
+  display: inline-block;
+  border: 1px solid var(--c-accent);
+  border-radius: var(--border-radius);
+  width: fit-content;
+  padding: calc(0.5 * var(--border-radius));
+  margin: calc(0.25 * var(--border-radius));
 }
 
 @media (min-width: 40rem) {
@@ -261,6 +307,23 @@ ol, ul {
 
   .content {
     padding-inline: var(--s-med);
+  }
+
+  .project {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 1rem;
+  }
+
+  .project__image-wrapper {
+    grid-column: 2;
+    grid-row: 1/4;
+    align-self: center;
+  }
+
+  .project__links {
+    grid-column: 2;
+    grid-row: 4;
   }
 }
 
