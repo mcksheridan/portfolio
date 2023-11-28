@@ -284,6 +284,15 @@ ol, ul {
   max-width: var(--b-sm);
 }
 
+.social-media__link {
+  border-color: transparent;
+}
+
+.social-media__link:hover {
+  border-bottom: 3px solid var(--c-monogram-bg);
+  transition: border-color 0.5s;
+}
+
 .footer {
   text-align: center;
   margin-block: var(--s-lg);

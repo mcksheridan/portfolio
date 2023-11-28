@@ -8,7 +8,11 @@ const SocialMedia = ({ socialMedia }: SocialMediaCollectionProps) => {
         {socialMedia.map((media) => {
           return (
             <li key={media.title}>
-              <a href={media.url} aria-label={media.icon ? media.title : ''}>
+              <a
+                href={media.url}
+                aria-label={media.icon ? media.title : ''}
+                className="social-media__link"
+              >
                 {media.icon ? <img src={`/${media.icon}`} height="50" alt="" /> : media.title}
               </a>
             </li>
