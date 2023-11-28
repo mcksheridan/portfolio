@@ -30,3 +30,12 @@ export type SocialMediaProps = {
 export type SocialMediaCollectionProps = {
   socialMedia: SocialMediaProps []
 }
+
+export type SkillProps = {
+  category: 'Tech' | 'Project Management' | 'Communication',
+  name: string,
+}
+
+export type SkillsProps = {
+  skills: SkillProps[],
+}

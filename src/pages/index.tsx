@@ -6,9 +6,11 @@ import SocialMedia from "../components/socialMedia"
 import Seo from "../components/seo"
 import PROJECT_DATA from "../data/project"
 import SOCIAL_MEDIA_DATA from "../data/socialMedia"
+import SKILLS_DATA from "../data/skills"
 import "../styles/index.css"
 
 import type { SectionProps } from "../types"
+import Skills from "../components/skills"
 
 const SECTION_DATA: SectionProps[] = [
   {
@@ -28,6 +30,8 @@ const SECTION_DATA: SectionProps[] = [
         out</a> and connect. I'm always open to opportunities to
         learn, grow, and collaborate with others.
       </p>
+      <h3>My Skills</h3>
+      <Skills skills={SKILLS_DATA} />
     </>
   },
   {
