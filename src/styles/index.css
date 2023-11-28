@@ -298,7 +298,7 @@ ol, ul {
   margin: calc(0.25 * var(--border-radius));
 }
 
-.social-media {
+#contact {
   text-align: center;
 }
 
