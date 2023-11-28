@@ -262,6 +262,15 @@ ol, ul {
   margin: calc(0.25 * var(--border-radius));
 }
 
+.footer {
+  text-align: center;
+  margin-block: var(--s-lg);
+}
+
+.footer > p {
+  margin-block: 0;
+}
+
 @media (min-width: 40rem) {
   .header {
     grid-template-areas: "logo nav";

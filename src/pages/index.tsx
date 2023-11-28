@@ -68,7 +68,10 @@ export default function Home() {
         </section>
         {SECTION_DATA.map((section) => <Section key={section.id} {...section} />)}
       </main>
-      <footer>
+      <footer className="footer">
+        <p>
+          Icons from <a href="https://icon8.com" target="_blank" className="link">Icon8</a>
+        </p>
         <p>
           © {getYear()} Sheridan McKisick
         </p>
