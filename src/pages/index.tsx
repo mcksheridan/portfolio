@@ -22,8 +22,7 @@ const SECTION_DATA: SectionProps[] = [
         front end technologies. I frequently work with
         JavaScript, TypeScript, and React.js. I'm also a
         Certified Contentful Developer and have professional
-        experience with headless CMS, Node.js, SQL, Gatsby,
-        and Next.js.
+        experience with headless CMS, Node.js, SQL, and Next.js.
       </p>
       <p>
         Feel free to <a href="#contact" className="link">reach
