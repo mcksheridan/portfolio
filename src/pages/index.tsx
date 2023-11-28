@@ -59,7 +59,7 @@ export default function Home() {
       <header className="header">
         <Navigation sections={SECTION_DATA} />
       </header>
-      <main>
+      <main className="content">
         <section>
           <h1>Hello, I'm Sheridan</h1>
           <p>I'm a front end developer</p>

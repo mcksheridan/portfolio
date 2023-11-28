@@ -1,6 +1,7 @@
 /* Settings */
 :root {
   /* (b)reakpoints */
+  --b-xsm: 18.75rem;
   --b-sm: 40rem;
   --b-med: 52rem;
   --b-lg: 112rem;
@@ -30,6 +31,7 @@ body {
   background-color: var(--c-neutral-light);
   font-family: "Open Sans Variable", sans-serif;
   margin: 0;
+  min-width: var(--b-xsm);
   width: 100%;
 }
 
@@ -68,7 +70,7 @@ ol, ul {
   grid-template-areas: "logo toggle" "nav nav";
   justify-content: space-between;
   justify-items: center;
-  padding: var(--s-med);
+  padding: var(--s-sm);
   position: sticky;
   top: 0;
   z-index: 99;
@@ -93,7 +95,6 @@ ol, ul {
 }
 
 .header__icon {
-  padding-inline-start: var(--s-sm);
   padding-inline-end: var(--s-sm);
 }
 
@@ -131,6 +132,10 @@ ol, ul {
   width: 100%;
 }
 
+.content {
+  padding-inline: var(--s-sm);
+}
+
 .section__heading {
   padding-top: var(--d-header-height);
 }
@@ -139,6 +144,7 @@ ol, ul {
   .header {
     grid-template-areas: "logo nav";
     grid-template-columns: 4fr 6fr;
+    padding-inline: var(--s-med)
   }
 
   .header__toggle {
@@ -176,11 +182,15 @@ ol, ul {
     padding-block: unset;
     width: unset;
   }
+
+  .content {
+    padding-inline: var(--s-med);
+  }
 }
 
 @media (min-width: 55rem) {
-  .header__icon {
-    padding-inline-start: var(--s-lg);
+  .header {
+    padding-inline: var(--s-lg);
   }
 
   .nav-links {
@@ -188,6 +198,10 @@ ol, ul {
   }
 
   .nav-links__wrapper {
+    padding-inline: var(--s-lg);
+  }
+
+  .content {
     padding-inline: var(--s-lg);
   }
 }
