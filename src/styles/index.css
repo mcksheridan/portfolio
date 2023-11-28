@@ -131,6 +131,10 @@ ol, ul {
   width: 100%;
 }
 
+.section__heading {
+  padding-top: var(--d-header-height);
+}
+
 @media (min-width: 40rem) {
   .header {
     grid-template-areas: "logo nav";
@@ -186,10 +190,6 @@ ol, ul {
   .nav-links__wrapper {
     padding-inline: var(--s-lg);
   }
-}
-
-.section__heading {
-  padding-top: var(--d-header-height);
 }
 
 /* Utilities */

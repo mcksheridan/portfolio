@@ -63,7 +63,7 @@ export default function Home() {
         <section>
           <h1>Hello, I'm Sheridan</h1>
           <p>I'm a front end developer</p>
-          <p><a href="#projects">My Projects</a></p>
+          <p><a href={`#${SECTION_DATA[0].id}`}>Learn More</a></p>
         </section>
         {SECTION_DATA.map((section) => <Section key={section.id} {...section} />)}
       </main>
