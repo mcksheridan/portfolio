@@ -6,6 +6,7 @@ import SocialMedia from "../components/socialMedia"
 import Seo from "../components/seo"
 import PROJECT_DATA from "../data/project"
 import SOCIAL_MEDIA_DATA from "../data/socialMedia"
+import "../styles/index.css"
 
 import type { SectionProps } from "../types"
 
@@ -55,7 +56,7 @@ export const Head = () => <Seo />
 export default function Home() {
   return (
     <>
-      <header>
+      <header className="header">
         <Navigation sections={SECTION_DATA} />
       </header>
       <main>
