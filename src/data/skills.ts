@@ -27,6 +27,10 @@ const SKILLS_DATA: SkillProps[] = [
   },
   {
     category: 'Tech',
+    name: 'Gatsby',
+  },
+  {
+    category: 'Tech',
     name: 'HTML5',
   },
   {
@@ -80,6 +84,10 @@ const SKILLS_DATA: SkillProps[] = [
   {
     category: 'Tech',
     name: 'SQL',
+  },
+  {
+    category: 'Tech',
+    name: 'PostgreSQL',
   },
   {
     category: 'Tech',
