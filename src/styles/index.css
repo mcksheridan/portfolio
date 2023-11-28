@@ -8,10 +8,12 @@
 
   /* (c)olors */
   --c-accent: rgba(242, 230, 222, 1);
+  --c-accent-shadow: rgba(222, 210, 200, 1);
   --c-neutral-dark: rgba(41, 26, 16, 1);
   --c-neutral-light: rgba(253, 251, 250, 1);
   --c-monogram-bg: rgba(190, 190, 190, 1);
   --c-monogram-accent: rgba(205, 175, 96, 1);
+  --c-monogram-highlight: rgba(218, 194, 138, 1);
 
   /* (d)imensions */
   --d-header-height: calc(55px + (1rem * 2)); /* i.e., logo height + header padding */
@@ -30,6 +32,16 @@
 }
 
 /* Tools */
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
 
 /* Generics */
 
@@ -114,6 +126,9 @@ ol, ul {
 }
 
 .nav {
+  animation-name: fadein;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
   background: rgba(255, 255, 255, 0.9);
   grid-column: 1 / 3;
   width: calc(100% + var(--d-header-padding));
@@ -196,6 +211,10 @@ ol, ul {
 }
 
 .intro__heading {
+  animation-duration: 3s;
+  animation-name: fadein;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
   font-family: var(--accent-font);
   font-size: clamp(2rem, 0.2353rem + 9.4118vw, 4rem);
 }
@@ -211,23 +230,31 @@ ol, ul {
 }
 
 .link-button {
-  background: var(--c-accent);
   border: 1px solid var(--c-neutral-dark);
   border-radius: 2rem;
   font-weight: bold;
   padding: var(--s-sm);
   width: fit-content;
+  transition: all 0.5s;
 }
 
 .link-button:link,
-.link-button:visited,
-.link-button:hover {
+.link-button:visited {
+  background: var(--c-accent);
+  box-shadow: inset -0.25rem -0.25rem var(--c-accent-shadow);
   color: var(--c-neutral-dark);
   text-decoration: none;
 }
 
-.link-button:active {
+.link-button:hover {
+  background: var(--c-monogram-accent);
+  box-shadow: inset 0.25rem 0.25rem var(--c-monogram-highlight);
   color: var(--c-neutral-light);
+  text-decoration: none;
+}
+
+.link-button:active {
+  color: var(--c-neutral-dark);
 }
 
 .project {
