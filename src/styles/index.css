@@ -64,14 +64,23 @@ ol, ul {
 
 /* Components */
 
-.header {
-  align-items: center;
+.width-container {
+  max-width: 80rem;
+  margin-inline: auto;
+}
+
+.header-background {
   background: var(--c-neutral-light);
   background: linear-gradient(
     180deg, var(--c-accent) 0%,
     var(--c-neutral-light) var(--d-header-height),
     rgba(255,255,255,0) calc(var(--d-header-height) + 1px)
-  );
+    );
+  width: 100%;
+}
+
+.header {
+  align-items: center;
   display: grid;
   grid-template-areas: "logo toggle" "nav nav";
   justify-content: space-between;
@@ -164,7 +173,7 @@ ol, ul {
   padding-block: var(--d-header-height);
 }
 
-.section:nth-child(even) {
+.section-background:nth-child(even) {
   background-image: url('/background-dots.png');
   background-repeat: space;
 }

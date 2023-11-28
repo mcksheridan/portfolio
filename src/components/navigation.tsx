@@ -7,7 +7,7 @@ const Navigation = ({ sections }: NavigationProps) => {
   const toggleNav = () => setIsVisible(!isVisible);
 
   return (
-    <>
+    <div className="header width-container">
       <a href="https://mcksheridan.com" className="header__link">
         <img
           src="/monogram.png"
@@ -46,7 +46,7 @@ const Navigation = ({ sections }: NavigationProps) => {
             })}
         </ul>
       </nav>
-    </>
+    </div>
   )
 }
 

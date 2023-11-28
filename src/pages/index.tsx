@@ -56,7 +56,7 @@ export const Head = () => <Seo />
 export default function Home() {
   return (
     <>
-      <header className="header">
+      <header className="header-background">
         <Navigation sections={SECTION_DATA} />
       </header>
       <main className="content">
@@ -68,7 +68,7 @@ export default function Home() {
         </section>
         {SECTION_DATA.map((section) => <Section key={section.id} {...section} />)}
       </main>
-      <footer className="footer">
+      <footer className="footer width-container">
         <p>
           Icons from <a href="https://icon8.com" target="_blank" className="link">Icon8</a>
         </p>
