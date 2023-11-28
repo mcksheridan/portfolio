@@ -262,6 +262,19 @@ ol, ul {
   margin: calc(0.25 * var(--border-radius));
 }
 
+.social-media {
+  text-align: center;
+}
+
+.social-media__container {
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+	justify-content: space-between;
+  margin: var(--s-med) auto;
+  max-width: var(--b-sm);
+}
+
 .footer {
   text-align: center;
   margin-block: var(--s-lg);
