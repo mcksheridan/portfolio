@@ -6,9 +6,9 @@ const PROJECT_DATA: ProjectProps[] = [
     description: `Users can create timed exercise routines and use the
     built-in timer to run through their own routines, as
     well as routines from other users.`,
-    techStack: ['JavaScript', 'Express.js', 'Pug', 'SCSS', 'Heroku'],
+    techStack: ['JavaScript', 'Express.js', 'Pug', 'SCSS', 'PostgreSQL'],
     links: {
-      // live: 'http://stretches.mcksheridan.com/',
+      live: 'https://stretch-timer.onrender.com',
       code: 'https://github.com/mcksheridan/stretches',
     },
     image: 'project__stretches.jpg'
@@ -18,9 +18,9 @@ const PROJECT_DATA: ProjectProps[] = [
     description: `This web application creates a web scraping REST API
     on the server side and consumes it on the client side to display
     information about the weather and Japanese idioms.`,
-    techStack: ['HTML', 'CSS/Sass', 'JavaScript', 'Express.js', 'Heroku'],
+    techStack: ['HTML', 'CSS/Sass', 'JavaScript', 'Express.js'],
     links: {
-      // live: 'https://idioms.mcksheridan.com/',
+      live: 'https://idioms.onrender.com',
       code: 'https://github.com/mcksheridan/idioms',
     },
     image: 'project__idioms.jpg'
@@ -33,7 +33,7 @@ const PROJECT_DATA: ProjectProps[] = [
     or a character count (Japanese).`,
     techStack: ['HTML', 'CSS/Sass', 'JavaScript'],
     links: {
-      // live: 'https://mcksheridan.com/projects/word_counter/',
+      live: 'https://mcksheridan.github.io/word_counter/',
       code: 'https://github.com/mcksheridan/word_counter',
     },
     image: 'project__page-counter.jpg'

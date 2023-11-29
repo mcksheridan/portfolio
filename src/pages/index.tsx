@@ -36,7 +36,17 @@ const SECTION_DATA: SectionProps[] = [
   {
     title: 'Projects',
     id: 'projects',
-    children: PROJECT_DATA.map((project) => <Project {...project} key={project.title} />)
+    children: <>
+      <p>These are some of my personal projects. For more information on my professional
+        projects, please visit my <a href="https://linkedin.com/in/sheridanm"
+        className="link">LinkedIn</a>.
+      </p>
+      <p>
+        <strong>Note: </strong>
+        Some projects might be "sleeping" and require a longer time to load initially.
+      </p>
+      {PROJECT_DATA.map((project) => <Project {...project} key={project.title} />)}
+    </>
   },
   {
     title: 'Contact',
