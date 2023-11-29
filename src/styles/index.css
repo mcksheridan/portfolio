@@ -88,7 +88,10 @@ ol, ul {
     var(--c-neutral-light) var(--d-header-height),
     rgba(255,255,255,0) calc(var(--d-header-height) + 1px)
     );
+  position: sticky;
+  top: 0;
   width: 100%;
+  z-index: 99;
 }
 
 .header {
@@ -98,9 +101,6 @@ ol, ul {
   justify-content: space-between;
   justify-items: center;
   padding: var(--s-sm);
-  position: sticky;
-  top: 0;
-  z-index: 99;
 }
 
 .header__link {
