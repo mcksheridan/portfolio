@@ -258,6 +258,16 @@ ol, ul {
   color: var(--c-neutral-dark);
 }
 
+.external-link:after {
+  background-image: url('/svg/externalLink.svg');
+  background-size: 0.75rem 0.75rem;
+  content: '';
+  position: absolute;
+  margin-inline-start: calc(var(--s-sm) / 3);
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
 .project {
   margin-block-end: var(--s-xl);
 }

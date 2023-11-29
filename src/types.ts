@@ -14,6 +14,7 @@ export type ProjectProps = {
 export type SectionProps = {
   title: string,
   id: string,
+  externalUrl?: string,
   children: ReactNode,
 }
 

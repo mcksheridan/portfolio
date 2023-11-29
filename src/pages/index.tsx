@@ -45,6 +45,12 @@ const SECTION_DATA: SectionProps[] = [
       <p>Let's start a conversation.</p>
       <SocialMedia socialMedia={SOCIAL_MEDIA_DATA} />
     </>
+  },
+  {
+    title: 'Blog',
+    id: 'blog',
+    externalUrl: 'https://www.blog.mcksheridan.com',
+    children: '',
   }
 ]
 
@@ -69,7 +75,7 @@ export default function Home() {
             <a href={`#${SECTION_DATA[0].id}`} className="link-button intro__cta">Learn More</a>
           </p>
         </section>
-        {SECTION_DATA.map((section) => <Section key={section.id} {...section} />)}
+        {SECTION_DATA.map((section) => section.externalUrl ? null : <Section key={section.id} {...section} />)}
       </main>
       <footer className="footer width-container">
         <p>

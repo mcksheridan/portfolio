@@ -5,6 +5,7 @@ import type { NavigationProps } from "../types";
 const Navigation = ({ sections }: NavigationProps) => {
   const [isVisible, setIsVisible] = React.useState(false);
   const toggleNav = () => setIsVisible(!isVisible);
+  const linkClasses = 'header__link nav-links__link'
 
   return (
     <div className="header width-container">
@@ -35,8 +36,9 @@ const Navigation = ({ sections }: NavigationProps) => {
             return (
               <li key={i} className="nav-links__wrapper">
                 <a
-                  href={`#${section.id}`}
-                  className="header__link nav-links__link"
+                  href={section.externalUrl ? section.externalUrl : `#${section.id}`}
+                  target={section.externalUrl ? '_blank' : ''}
+                  className={section.externalUrl ? linkClasses + ' external-link' : linkClasses}
                   onClick={() => setIsVisible(!isVisible)}
                 >
                   {section.title}
