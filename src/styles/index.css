@@ -72,8 +72,6 @@ ol, ul {
   padding: 0;
 }
 
-/* Objects */
-
 /* Components */
 
 .width-container {
@@ -434,5 +432,3 @@ ol, ul {
     grid-column-gap: var(--s-xl)
   }
 }
-
-/* Utilities */
