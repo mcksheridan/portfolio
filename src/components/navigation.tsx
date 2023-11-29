@@ -9,7 +9,7 @@ const Navigation = ({ sections }: NavigationProps) => {
 
   return (
     <div className="header width-container">
-      <a href="https://mcksheridan.com" className="header__link">
+      <a href="https://www.mcksheridan.com" className="header__link">
         <img
           src="/monogram.png"
           className="header__icon"
