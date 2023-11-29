@@ -3,7 +3,7 @@
   /* (b)reakpoints */
   --b-xsm: 18.75rem;
   --b-sm: 40rem;
-  --b-med: 55rem;
+  --b-med: 66.5rem;
   --b-lg: 112rem;
 
   /* (c)olors */
@@ -405,7 +405,7 @@ ol, ul {
   }
 }
 
-@media (min-width: 55rem) {
+@media (min-width: 66.5rem) {
   .header {
     padding-inline: var(--s-lg);
   }
