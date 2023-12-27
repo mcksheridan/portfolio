@@ -2,6 +2,17 @@ import type { ProjectProps } from "../types"
 
 const PROJECT_DATA: ProjectProps[] = [
   {
+    title: 'Todoist Viewer',
+    description: `View, sort, and filter all active tasks from a
+    Todoist project`,
+    techStack: ['TypeScript', 'React.js', 'Webpack', 'SCSS'],
+    links: {
+      live: 'https://elaborate-gingersnap-b5438f.netlify.app/',
+      code: 'https://github.com/mcksheridan/todoist-viewer',
+    },
+    image: 'project__todoistviewer.png',
+  },
+  {
     title: 'Stretch Timer',
     description: `Users can create timed exercise routines and use the
     built-in timer to run through their own routines, as
