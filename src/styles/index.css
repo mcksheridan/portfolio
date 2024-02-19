@@ -9,7 +9,8 @@
   /* (c)olors */
   --c-accent: rgba(242, 230, 222, 1);
   --c-accent-shadow: rgba(222, 210, 200, 1);
-  --c-neutral-dark: rgba(41, 26, 16, 1);
+  --c-neutral-dark: rgba(5, 5, 5, 1);
+  /* --c-neutral-dark: rgba(41, 26, 16, 1); */
   --c-neutral-light: rgba(253, 251, 250, 1);
   --c-monogram-bg: rgba(190, 190, 190, 1);
   --c-monogram-accent: rgba(205, 175, 96, 1);
@@ -97,7 +98,8 @@ html {
 }
 
 body {
-  background-color: var(--c-neutral-light);
+  background-color: var(--c-neutral-dark);
+  color: var(--c-neutral-light);
   font-family: "Open Sans Variable", sans-serif;
   margin: 0;
   min-width: var(--b-xsm);
@@ -225,11 +227,11 @@ ol, ul {
 
 .link:link,
 .link:visited {
-  color: var(--c-neutral-dark);
+  color: currentColor;
   font-weight: bold;
   text-decoration: underline;
   text-decoration-color: var(--c-monogram-accent);
-  text-decoration-thickness: 0.25rem;
+  text-decoration-thickness: 0.15rem;
 }
 
 .link:hover,
@@ -239,7 +241,7 @@ ol, ul {
 }
 
 .link:active {
-  color: var(--c-accent);
+  color: var(--c-accent-shadow);
 }
 
 .content {
@@ -250,18 +252,17 @@ ol, ul {
   padding-block: var(--d-header-height);
 }
 
-.section-background:nth-child(even) {
-  background-image: url('/background-dots.png');
-  background-repeat: space;
+.section-background {
+  background-color: var(--c-neutral-light);
+  border-radius: 10px;
+  color: var(--c-neutral-dark);
+  margin-block-end: 5rem;
+  padding-inline: 1rem;
 }
 
 .section__heading {
   font-family: var(--accent-font);
   margin-block-start: 0;
-  text-decoration: underline;
-  text-decoration-color: var(--c-monogram-bg);
-  text-decoration-style: solid;
-  text-decoration-thickness: 0.25rem;
 }
 
 .section > p {
@@ -315,6 +316,7 @@ ol, ul {
 .link-button {
   border: 1px solid var(--c-neutral-dark);
   border-radius: 2rem;
+  color: var(--c-neutral-dark);
   font-weight: bold;
   padding: var(--s-sm);
   width: fit-content;
@@ -325,6 +327,7 @@ ol, ul {
 .link-button:visited {
   background: var(--c-accent);
   box-shadow: inset -0.25rem -0.25rem var(--c-accent-shadow);
+  color: currentColor;
   color: var(--c-neutral-dark);
   text-decoration: none;
 }
@@ -383,6 +386,7 @@ ol, ul {
   --border-radius: 0.5rem;
 
   background: white;
+  color: black;
   display: inline-block;
   border: 1px solid var(--c-accent);
   border-radius: var(--border-radius);
