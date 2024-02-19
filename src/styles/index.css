@@ -29,7 +29,7 @@
   --s-xl: 5rem;
 
   /* other */
-  --accent-font: monospace;
+  --accent-font: 'Source Code Pro Variable', monospace;
 }
 
 /* Tools */
