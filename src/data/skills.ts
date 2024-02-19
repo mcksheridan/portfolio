@@ -87,6 +87,14 @@ const SKILLS_DATA: SkillProps[] = [
   },
   {
     category: 'Tech',
+    name: 'Handlebars',
+  },
+  {
+    category: 'Tech',
+    name: 'Pug',
+  },
+  {
+    category: 'Tech',
     name: 'CLI',
   },
   {
