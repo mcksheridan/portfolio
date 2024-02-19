@@ -4,8 +4,29 @@ import type { NavigationProps } from "../types";
 
 const Navigation = ({ sections }: NavigationProps) => {
   const [isVisible, setIsVisible] = React.useState(false);
-  const toggleNav = () => setIsVisible(!isVisible);
+  const [isClosing, setIsClosing] = React.useState(false);
   const linkClasses = 'header__link nav-links__link'
+
+  const closeNavigation = () => {
+    setIsClosing(true);
+
+    setTimeout(() => {
+      setIsVisible(false);
+      setIsClosing(false);
+    }, 250)
+  }
+
+  const getNavigationClassNames = () => {
+    if (isClosing) {
+      return "nav--closing";
+    }
+
+    if (isVisible) {
+      return "nav";
+    }
+
+    return "nav--closed";
+  }
 
   return (
     <div className="header width-container">
@@ -21,7 +42,7 @@ const Navigation = ({ sections }: NavigationProps) => {
       <button
         type="button"
         className="header__toggle"
-        onClick={() => toggleNav()}
+        onClick={() => isVisible ? closeNavigation() : setIsVisible(true)}
       >
         <img
           src="/svg/menu.svg"
@@ -30,7 +51,7 @@ const Navigation = ({ sections }: NavigationProps) => {
           aria-label={isVisible ? 'Close Menu' : 'Open Menu'}
         />
       </button>
-      <nav className={isVisible ? 'nav' : 'nav nav--closed'}>
+      <nav className={getNavigationClassNames()}>
         <ul className="nav-links">
           {sections.map((section, i) => {
             return (
@@ -39,7 +60,7 @@ const Navigation = ({ sections }: NavigationProps) => {
                   href={section.externalUrl ? section.externalUrl : `#${section.id}`}
                   target={section.externalUrl ? '_blank' : ''}
                   className={section.externalUrl ? linkClasses + ' external-link' : linkClasses}
-                  onClick={() => setIsVisible(!isVisible)}
+                  onClick={() => closeNavigation()}
                 >
                   {section.title}
                 </a>
