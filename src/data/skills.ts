@@ -71,10 +71,6 @@ const SKILLS_DATA: SkillProps[] = [
   },
   {
     category: 'Tech',
-    name: 'Cypress',
-  },
-  {
-    category: 'Tech',
     name: 'React Testing Library',
   },
   {
