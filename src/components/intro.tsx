@@ -36,7 +36,7 @@ const Intro = ({ link }: IntroProps) => {
             {headingAnimationComplete && (
                 <p className="intro__descr">I'm a <span className="highlighted-text">web developer</span>.
                     <a href={`#${link}`} className="intro__cta">
-                        <img src="/down-arrow-icon.png" alt="Down arrow" height="50" />
+                        <img src="/down-arrow-icon.png" alt="Down arrow" height="50" aria-label="Learn More" />
                     </a>
                 </p>
             )}
