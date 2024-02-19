@@ -7,6 +7,51 @@ const Navigation = ({ sections }: NavigationProps) => {
   const [isClosing, setIsClosing] = React.useState(false);
   const linkClasses = 'header__link nav-links__link'
 
+  React.useEffect(() => {
+    const adjustMobileView = () => {
+      if (window.innerWidth > 959) {
+        setIsVisible(true)
+      }
+
+      if (window.innerWidth < 960) {
+        setIsVisible(false)
+      }
+    }
+
+    adjustMobileView()
+
+    window.addEventListener("resize", () => adjustMobileView())
+
+    return () => window.removeEventListener("resize", () => adjustMobileView)
+  }, [])
+
+  React.useEffect(() => {
+    const cloesMenuOnMousedown = () => {
+      closeNavigation();
+    }
+
+    if (isVisible) {
+      window.addEventListener("mousedown", cloesMenuOnMousedown)
+    }
+
+    return () => window.removeEventListener("mousedown", cloesMenuOnMousedown)
+  }, [isVisible])
+
+  React.useEffect(() => {
+    const closeMenuOnEscape = event => {
+      if (event.key === "Escape") {
+        closeNavigation()
+      }
+    }
+
+    if (isVisible) {
+      window.addEventListener("keydown", closeMenuOnEscape)
+    }
+
+    return () => window.removeEventListener("keydown", closeMenuOnEscape)
+  }, [isVisible])
+
+
   const closeNavigation = () => {
     setIsClosing(true);
 
