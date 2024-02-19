@@ -85,7 +85,7 @@ export default function Home() {
       </main>
       <footer className="footer width-container">
         <p>
-          Icons from <a href="https://icon8.com" target="_blank" className="link">Icon8</a>
+          Icons from <a href="https://icons8.com" target="_blank" className="link">Icons8</a>
         </p>
         <p>
           © {getYear()} Sheridan McKisick
