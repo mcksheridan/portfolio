@@ -40,3 +40,7 @@ export type SkillProps = {
 export type SkillsProps = {
   skills: SkillProps[],
 }
+
+export type IntroProps = {
+  link: string,
+}

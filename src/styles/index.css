@@ -14,6 +14,7 @@
   --c-monogram-bg: rgba(190, 190, 190, 1);
   --c-monogram-accent: rgba(205, 175, 96, 1);
   --c-monogram-highlight: rgba(218, 194, 138, 1);
+  --c-highlight: rgba(255, 255, 0, 1);
 
   /* (d)imensions */
   --d-header-height: calc(55px + (1rem * 2)); /* i.e., logo height + header padding */
@@ -28,7 +29,7 @@
   --s-xl: 5rem;
 
   /* other */
-  --accent-font: 'Calligraffitti', sans-serif;
+  --accent-font: monospace;
 }
 
 /* Tools */
@@ -40,6 +41,28 @@
 
   to {
     opacity: 1;
+  }
+}
+
+@keyframes highlight {
+  0% {
+    background-image: linear-gradient(90deg, var(--c-highlight) 0%, transparent 0%);
+    background-position: left;
+  }
+  25% {
+    background-image: linear-gradient(90deg, var(--c-highlight) 0%, transparent 25%);
+    background-position: left;
+  }
+  50% {
+    background-image: linear-gradient(90deg, var(--c-highlight) 25%, transparent 50%);
+  }
+  75% {
+    background-image: linear-gradient(90deg, var(--c-highlight) 50%, transparent 75%);
+    background-position: left;
+  }
+  100% {
+    background-image: linear-gradient(90deg, var(--c-highlight) 75%, transparent 100%);
+    background-position: left;
   }
 }
 
@@ -210,26 +233,47 @@ ol, ul {
 }
 
 .intro {
-  padding-block: 38vh;
+  background-color: var(--c-neutral-dark);
+  color: var(--c-neutral-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 95vh;
 }
 
 .intro__heading {
-  animation-duration: 3s;
-  animation-name: fadein;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  font-family: var(--accent-font);
   font-size: clamp(2rem, 0.2353rem + 9.4118vw, 4rem);
 }
 
 .intro__heading,
 .intro__descr {
+  font-family: var(--accent-font);
   margin-block: 0;
 }
 
+.intro__descr {
+  animation-duration: 1.5s;
+  animation-name: fadein;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  font-size: 1rem;
+}
+
+.highlighted-text {
+  color: var(--c-neutral-dark);
+  animation-name: highlight;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  background-image: linear-gradient(to right, var(--c-highlight) 100%, transparent);
+}
+
 .intro__cta {
+  color: var(--c-neutral-light);
   display: block;
   margin-block-start: var(--s-med);
+  animation: 500ms ease-in 1.25s 1 both running fadein;
+  animation: 1.5s ease-in 1.75s 3 both running fadein;
+  font-size: 2rem;
 }
 
 .link-button {

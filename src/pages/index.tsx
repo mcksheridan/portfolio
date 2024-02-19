@@ -11,6 +11,7 @@ import "../styles/index.css"
 
 import type { SectionProps } from "../types"
 import Skills from "../components/skills"
+import Intro from "../components/intro"
 
 const SECTION_DATA: SectionProps[] = [
   {
@@ -79,12 +80,7 @@ export default function Home() {
         <Navigation sections={SECTION_DATA} />
       </header>
       <main className="content">
-        <section className="intro">
-          <h1 className="intro__heading">Hello, I'm Sheridan</h1>
-          <p className="intro__descr">I'm a front end developer
-            <a href={`#${SECTION_DATA[0].id}`} className="link-button intro__cta">Learn More</a>
-          </p>
-        </section>
+        <Intro link={SECTION_DATA[0].id} />
         {SECTION_DATA.map((section) => section.externalUrl ? null : <Section key={section.id} {...section} />)}
       </main>
       <footer className="footer width-container">
