@@ -24,9 +24,9 @@ const Navigation = ({ sections }: NavigationProps) => {
         onClick={() => toggleNav()}
       >
         <img
-          src={isVisible ? '/svg/close.svg' : '/svg/menu.svg'}
+          src="/svg/menu.svg"
           alt=""
-          height="50px"
+          height="35px"
           aria-label={isVisible ? 'Close Menu' : 'Open Menu'}
         />
       </button>

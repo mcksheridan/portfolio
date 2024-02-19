@@ -123,6 +123,10 @@ ol, ul {
   padding: var(--s-sm);
 }
 
+.header__toggle {
+  cursor: pointer;
+}
+
 .header__link {
   align-items: center;
   display: flex;
