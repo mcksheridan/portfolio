@@ -5,6 +5,7 @@
   --link: rgb(37, 61, 138);
   --hover: rgb(0, 0, 138);
   --accent: #0033cc;
+  --code: #ddd;
 }
 
 :root[data-theme="dark"] {
@@ -13,6 +14,7 @@
   --link: rgba(218, 194, 138, 1);
   --hover: rgb(248, 224, 138);
   --accent: #ffff00; /* yellow accent */
+  --code: #444;
 }
 
 * {
@@ -124,4 +126,24 @@ nav > ul {
   border: 0
 }
 
+figure {
+  max-width: 90%;
+  margin: 0 auto;
+}
 
+figure > img {
+  max-width: 95%
+}
+
+code {
+  background-color: var(--code)
+}
+
+pre {
+  background-color: var(--code);
+  white-space: pre-wrap
+}
+
+table td {
+  vertical-align: top;
+}
