@@ -44,3 +44,10 @@ export type SkillsProps = {
 export type IntroProps = {
   link: string,
 }
+
+export type LinkProps = {
+    title: string
+    url: string
+    isExternal?: boolean
+    opensInNewWindow?: boolean
+}

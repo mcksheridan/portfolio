@@ -11,7 +11,7 @@ import "../styles/index.css"
 
 import type { SectionProps } from "../types"
 import Skills from "../components/skills"
-import Intro from "../components/intro"
+import { Link } from "../components/Link"
 
 const SECTION_DATA: SectionProps[] = [
   {
@@ -75,22 +75,48 @@ export const Head = () => <Seo />
 
 export default function Home() {
   return (
-    <>
-      <header className="header-background">
-        <Navigation sections={SECTION_DATA} />
+    <div className='home-layout width-container'>
+      <header className='header'>
+        <h1 className='header_text'>
+        Sheridan Mehta-McKisick
+        </h1>
       </header>
-      <main className="content">
-        <Intro link={SECTION_DATA[0].id} />
-        {SECTION_DATA.map((section) => section.externalUrl ? null : <Section key={section.id} {...section} />)}
+
+      <main className='main'>
+        <div className='main_outer-border'>
+          <div className='main_inner-container'>
+            <p>
+              Hello, my name is Sheridan,
+              and I'm a front-end software engineer.
+              I create applications using React.js and TypeScript,
+              and I'm about passionate about accessibility.
+              I'm also a graduate student pursuing a Master's in Computer Science
+              with a specialization in Human-Computer Interaction
+              and Artificial Intelligence.
+            </p>
+            
+            <ul>
+              <li>
+                <Link url="https://blog.mcksheridan.com" title="Blog" />
+              </li>
+              <li>
+                <Link url="https://github.com/mcksheridan" title="GitHub" isExternal />
+              </li>
+              <li>
+                <Link url="https://linkedin.com/sheridanm" title="LinkedIn" isExternal />
+              </li>
+            </ul>
+          </div>
+        </div>
       </main>
       <footer className="footer width-container">
         <p>
           Icons from <a href="https://icons8.com" target="_blank" className="link">Icons8</a>
         </p>
         <p>
-          © {getYear()} Sheridan McKisick
+          © {getYear()} Sheridan Mehta-McKisick
         </p>
       </footer>
-    </>
+    </div>
   )
 }

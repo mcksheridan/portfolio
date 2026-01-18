@@ -127,29 +127,42 @@ ol, ul {
 
 /* Components */
 
+.home-layout {
+	display: flex;
+	flex-flow: column;
+	height: 100%;
+	/* min-height: 95vh; */
+	padding-inline: 1em;
+	padding-block: 0.5em;
+}
+
 .width-container {
   max-width: 80rem;
   margin-inline: auto;
 }
 
-.header-background {
+.header {
   background: var(--c-neutral-dark);
+  max-width: 100%;
   position: sticky;
   top: 0;
-  width: 100%;
   z-index: 99;
 }
 
-.header {
+/* .header {
   align-items: center;
   display: grid;
   grid-template-areas: "logo toggle" "nav nav";
   justify-content: space-between;
   justify-items: center;
   padding: var(--s-sm);
+} */
+
+.header_text {
+  font-size: 1.25em
 }
 
-.header__toggle {
+/* .header__toggle {
   cursor: pointer;
 }
 
@@ -174,6 +187,34 @@ ol, ul {
 
 .header__icon {
   padding-inline-end: var(--s-sm);
+} */
+
+.main {
+  align-content: center;
+  flex-grow: 1;
+  text-align: justify;
+  /* min-width: 95vh; */
+}
+
+.main_outer-border {
+  border-bottom: 0.25rem solid var(--c-neutral-light);
+  border-left: 0.25rem solid var(--c-neutral-light);
+  background-color: var(--c-neutral-dark);
+  padding: var(--s-sm)
+}
+
+.main_inner-container {
+  border-right: 0.5rem solid var(--c-highlight);
+  border-top: 0.5rem solid var(--c-highlight);
+  background-color: var(--c-neutral-light);
+  color: var(--c-neutral-dark);
+  font-weight: 600;
+  margin: var(--s-sm);
+  padding: var(--s-med);
+}
+
+.main_inner-container > p:first-child {
+  margin-block-start: 0;
 }
 
 .nav,
@@ -275,7 +316,7 @@ ol, ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 95vh;
+  /* min-height: 95vh; */
 }
 
 .intro__heading {
@@ -343,7 +384,19 @@ ol, ul {
   color: var(--c-neutral-dark);
 }
 
-.external-link:after {
+.external-link {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: var(--s-sm);
+  max-width: fit-content
+}
+
+.external-link img {
+  max-height: 0.75em
+}
+
+/* .external-link:after {
   background-image: url('/svg/externalLink.svg');
   background-size: 0.75rem 0.75rem;
   content: '';
@@ -351,7 +404,7 @@ ol, ul {
   margin-inline-start: calc(var(--s-sm) / 3);
   width: 0.75rem;
   height: 0.75rem;
-}
+} */
 
 .project {
   margin-block-end: var(--s-xl);
@@ -470,6 +523,10 @@ ol, ul {
     display: unset;
     padding-block: unset;
     width: unset;
+  }
+
+  .main {
+    text-align: unset;
   }
 
   .content {
