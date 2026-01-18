@@ -26,6 +26,7 @@ body {
   font-family: system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
+  font-size: 1.25rem;
   line-height: 1.6;
 }
 
@@ -97,7 +98,15 @@ nav > ul {
   flex-direction: column;
   gap: 3em;
   list-style: none;
+  margin-block-end: 5em;
   padding-inline: 0;
+}
+
+.posts__details {
+  display: flex;
+  flex-direction: column;
+  margin-block: 0;
+  padding-block: 0;
 }
 
 .posts > li > p {
