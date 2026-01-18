@@ -1,3 +1,1 @@
-# Portfolio
-
-Portfolio website built using Gatsby.
+# Homepage With Blog Posts

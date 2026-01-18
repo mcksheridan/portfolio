@@ -1,0 +1,1 @@
+Use /media/... paths directly in Markdown.

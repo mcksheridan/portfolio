@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+---
+
+<article>
+  <h2>{{ title }}</h2>
+    <p class="meta">
+      Published on <time datetime="{{ page.date.toISOString() }}">
+        {{ formatDate(page.date) }}
+      </time>
+      
+      {% if updated %}
+        <br />
+        Updated on
+          <time datetime="{{ updated.toISOString() }}">
+            {{ formatDate(updated) }}
+          </time>
+      {% endif %}
+    </p>
+
+  {{ content | safe }}
+
+  {% if tags %}
+  <section>
+  <h3>Tags</h3>
+  <ul class="tags">
+    {% for tag in tags %}
+      <li><a href="/tags/{{ tag }}/">{{ tag }}</a></li>
+    {% endfor %}
+  </ul>
+  </section>
+  {% endif %}
+</article>
