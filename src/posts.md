@@ -11,9 +11,14 @@ pagination:
   <li>
     <span class="posts__details">
       <a href="{{ post.url }}">{{ post.data.title }}</a>
-        <time datetime="{{ post.date | htmlDateString }}">
-          {{ post.date | date: "%b %-d, %Y" }}
-        </time>
+        <span>
+          <time datetime="{{ post.date | htmlDateString }}">
+            {{ post.date | date: "%b %-d, %Y" }}
+          </time>
+          {% if post.data.updated %}(Updated
+          <time datetime="{{ post.data.updated | htmlDateString }}">
+            {{ post.data.updated | date: "%b %-d, %Y" }}</time>)
+          {% endif %}</span>
     </span>
     Tags: <ul class="tags">{% for tag in post.data.tags %}<li><a href="/tags/{{ tag }}/">{{ tag }}</a></li>{% endfor %}</ul>
   </li>

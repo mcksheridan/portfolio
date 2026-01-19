@@ -4,7 +4,11 @@ module.exports = function (eleventyConfig) {
     
     eleventyConfig.addCollection("posts", function (collection) {
         return collection.getFilteredByGlob("src/posts/**/*.md")
-            .sort((a, b) => b.date - a.date)
+            .sort((a, b) => {
+                const bDate = b.data?.updated ?? b.date
+                const aDate = a.data?.updated ?? a.date
+                return bDate - aDate
+            })
             .filter(post => !post.data.draft)
     })
 
