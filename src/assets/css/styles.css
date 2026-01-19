@@ -164,6 +164,14 @@ button:focus {
   display: none
 }
 
+h3:has(a) {
+  margin-block-end: 0
+}
+
+h3:has(a) ~ p {
+  margin-block-start: 0
+}
+
 .icon {
   height: 2em;
   border: 0
