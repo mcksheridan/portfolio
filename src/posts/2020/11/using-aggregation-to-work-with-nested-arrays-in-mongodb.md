@@ -11,7 +11,7 @@ tags:
 description: "After restructuring my database to accommodate user authentication, I was faced with a new challenge: displaying and manipulating information from arrays."
 ---
 
-After [restructuring my database to accommodate user authentication](../2020-11-13--creating-one-to-many-relationships-with-embedded-documents-in-mongodb/), I was faced with a new challenge: displaying and manipulating information from arrays.
+After [restructuring my database to accommodate user authentication](../../11/creating-one-to-many-relationships-with-embedded-documents-in-mongodb/), I was faced with a new challenge: displaying and manipulating information from arrays.
 
 Before restructuring the database, I had implemented pagination and a way for users to sort videos and have their sorting preference remembered. The variable `videoLimitPerPage` established the number of videos a user would see on each page before needing to go another page. I added a `page` parameter for routes that displayed videos and stored the current page in the variable `page`. Users could store their personal preference for how videos should be sorted in a variable called `sortVideoOption`, and this variable would in turn be stored as a local variable in `app.locals.sortVideoOption`. I implemented these things by creating a function called "video\_list" and accessing its callback in my views to display videos.
 

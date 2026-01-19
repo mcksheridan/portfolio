@@ -36,7 +36,7 @@ I ran into another issue with case insensitive sorting later on when I adjusted 
 
 By default, videos appear either by date bookmarked or by date added to bookmark list (depending on whether a user is viewing all videos or only the videos that appear in a particular list they have created). The `lower()` function did not work on timestamps so this generated the first error.
 
-To fix this error, I decided to create a new "pipeline" to handle video sorting. First, I used my existing [getSortOption](../2020-11-13--using-aggregation-to-work-with-nested-arrays-in-mongodb/) inside of a newly created function called checkCaseSensitivity. I have been trying harder to create functions that serve singular purposes, so checkCaseSensitivity was a pretty simple, self-explanatory function.
+To fix this error, I decided to create a new "pipeline" to handle video sorting. First, I used my existing [getSortOption](../../../2020/11/using-aggregation-to-work-with-nested-arrays-in-mongodb/) inside of a newly created function called checkCaseSensitivity. I have been trying harder to create functions that serve singular purposes, so checkCaseSensitivity was a pretty simple, self-explanatory function.
 
 ```
 const checkCaseSensitivity = () => {

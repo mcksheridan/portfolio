@@ -35,7 +35,7 @@ videos: [{
 
 Without the video schema, I would need to change the process by which videos were added to the database. I also took this as an opportunity to clean up my existing code and use an async waterfall function to hand off callback data to the next function.
 
-First, I created a function that [followed the URL](../2020-09-14--following-urls-with-redirect-requests-in-node-js-with-follow-redirects/) the user submitted to see if there were any redirects. Next, I created another function that used that redirected URL to check for API data. If the API data could be successfully fetched, the next function I created then checked to confirm that it was not undefined. After that, I used a different function to [determine the ID TikTok assigned to the video](../2020-10-30--getting-tiktok-date-information-in-node-js/). My next function checked for duplicate videos within the database.
+First, I created a function that [followed the URL](../../09/following-urls-with-redirect-requests-in-node-js-with-follow-redirects/) the user submitted to see if there were any redirects. Next, I created another function that used that redirected URL to check for API data. If the API data could be successfully fetched, the next function I created then checked to confirm that it was not undefined. After that, I used a different function to [determine the ID TikTok assigned to the video](../../10/getting-tiktok-date-information-in-node-js/). My next function checked for duplicate videos within the database.
 
 This duplicate checker was the first meaningful deviation from my old code. Instead of searching through videos as separate documents, I was searching through the videos array of my user model.
 
@@ -50,7 +50,7 @@ However, I now needed to search users instead of videos, and, after finding the 
 ```
 User.findOne( { $and: [ { email: req.user.email }, { 'videos.id': tiktokId } ] } )```
 
-After checking for duplicate videos, I created four functions (get binary ID, get thirty two left bits, get decimal from bits, and get date added) to [find the date the video was created](../2020-10-30--getting-tiktok-date-information-in-node-js/) on. I created another function to save all of the video data to a new object.
+After checking for duplicate videos, I created four functions (get binary ID, get thirty two left bits, get decimal from bits, and get date added) to [find the date the video was created](../../10/getting-tiktok-date-information-in-node-js/) on. I created another function to save all of the video data to a new object.
 
 The way the video data was saved to a variable represents another deviation from my previous code. Previously, I created a object called and added TikTok data to that object. After I finished adding all of the necessary data to the object, I created a variable that represented a new video.
 

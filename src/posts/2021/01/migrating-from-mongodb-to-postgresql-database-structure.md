@@ -11,7 +11,7 @@ tags:
 description: "As I continued to restructure my database to accommodate user authentication, I ran into several issues. I solved some of these problems using embedded documents and aggregation. However, as I continued to learn more about databases, I came to an important realization: I misunderstood the relationships within the data I created; I incorrectly identified various relationships within my database as one-to-many."
 ---
 
-As I continued to restructure my database to accommodate user authentication, I ran into several issues. I solved some of these problems using [embedded documents](../2020-11-13--creating-one-to-many-relationships-with-embedded-documents-in-mongodb/) and [aggregation](../2020-11-13--using-aggregation-to-work-with-nested-arrays-in-mongodb/). However, as I continued to learn more about databases, I came to an important realization: I misunderstood the relationships within the data I created; I incorrectly identified various relationships within my database as one-to-many.
+As I continued to restructure my database to accommodate user authentication, I ran into several issues. I solved some of these problems using [embedded documents](../../../2020/11/creating-one-to-many-relationships-with-embedded-documents-in-mongodb/) and [aggregation](../../../2020/11/using-aggregation-to-work-with-nested-arrays-in-mongodb/). However, as I continued to learn more about databases, I came to an important realization: I misunderstood the relationships within the data I created; I incorrectly identified various relationships within my database as one-to-many.
 
 After learning more about databases, I sat down (with a pencil and paper) and made some new notes. One user could have many favorite videos and many lists. At first glance, users had a one-to-many relationship with both videos and lists. Although each user would have their own unique set of lists, multiple users could add the same video. In my current database structure, many users could add the same video and this would add a new embedded document to their user document, despite being the exact same information as any other video with the same TikTok video ID. Instead of users and videos having a one-to-many relationship, users and videos should have a many-to-many relationship.
 
@@ -148,7 +148,7 @@ date\_added TIMESTAMP NOT NULL,
 </tbody>
 </table>
 
-I handled video ids differently on my videos table than I did for my videos schema. For my MongoDb videos schema, each video document had two ids: the id that MongoDb assigned it and the [id for the TikTok video itself](../2020-10-30--getting-tiktok-date-information-in-node-js/). There was no need for these two ids as the id that TikTok assigns each video is already unique. Instead of asking PostgreSQL to assign a unique, increasing integer for each video, I decided to use the id TikTok created when inserting new videos. Aside from the difference in ids, I also introduced a variable character limit for strings in the PostgreSQL table.
+I handled video ids differently on my videos table than I did for my videos schema. For my MongoDb videos schema, each video document had two ids: the id that MongoDb assigned it and the [id for the TikTok video itself](../../../2020/10/getting-tiktok-date-information-in-node-js/). There was no need for these two ids as the id that TikTok assigns each video is already unique. Instead of asking PostgreSQL to assign a unique, increasing integer for each video, I decided to use the id TikTok created when inserting new videos. Aside from the difference in ids, I also introduced a variable character limit for strings in the PostgreSQL table.
 
 The final big difference the original schema and the new table was the date bookmarked field. All of the information for one video could be shared between users, with the exception of the date bookmarked field. This value would be unique among users. However, I did not want to structure this as a one-to-many relationships where there were potentially multiple rows in a table that had identical information, save for one field (the date bookmarked field). I decided to handle the data for the date bookmarked later, in a reference table.
 
@@ -195,6 +195,7 @@ ON UPDATE CASCADE
 </td>
 </tr>
 </tbody>
+</table>
 
 I generated an id for lists in the same manner that I generated an id for users. I also introduced relationships in the lists table, just as I had in the MongoDb schema, but I referenced a user id instead of video ids. This represents the one-to-many relationship where one user could have many lists. Each list therefore will reference the one user who created it. I added a foreign key as a constraint and made sure that, if the user it references is updated or deleted, the list will reflect those changes. (For example, if a user decides to delete their account, the lists they have created will also disappear.)
 

@@ -3,7 +3,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/media")
     
     eleventyConfig.addCollection("posts", function (collection) {
-        return collection.getFilteredByGlob("src/posts/*.md")
+        return collection.getFilteredByGlob("src/posts/**/*.md")
             .sort((a, b) => b.date - a.date)
             .filter(post => !post.data.draft)
     })

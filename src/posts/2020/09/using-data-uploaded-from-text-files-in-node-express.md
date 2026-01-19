@@ -17,7 +17,7 @@ The list is formatted as follows:
 `Date: YYYY-MM-DD HH:MM:SS  
 Video Link: https://www.tiktokv.com/share/video/videoidnumber`
 
-I want a user to be able to upload this text file. Each separate entry would create a new video object using the video link and its corresponding date. The video link uses a different schema from the other videos (the host URL is tiktokv.com as opposed to tiktok.com), so I will continue to use the [follow-redirect package](../2020-09-14--following-urls-with-redirect-requests-in-node-js-with-follow-redirects.md) to get a URL scheme that can fetch JSON data.
+I want a user to be able to upload this text file. Each separate entry would create a new video object using the video link and its corresponding date. The video link uses a different schema from the other videos (the host URL is tiktokv.com as opposed to tiktok.com), so I will continue to use the [follow-redirect package](../following-urls-with-redirect-requests-in-node-js-with-follow-redirects) to get a URL scheme that can fetch JSON data.
 
 I created a simple form in my template engine for the user to upload their list.
 
@@ -103,7 +103,7 @@ for (let i = 0; i < dateVideoArray.length; i++) {
 }
 ```
 
-I used [follow-redirects and fetch](../2020-09-14--following-urls-with-redirect-requests-in-node-js-with-follow-redirects.md) to get response data about each video. I then checked to see if a video with the same author and title existed in the database already.
+I used [follow-redirects and fetch](../following-urls-with-redirect-requests-in-node-js-with-follow-redirects) to get response data about each video. I then checked to see if a video with the same author and title existed in the database already.
 
 ```
 Video.findOne({ 'title': data.title, 'author_name': data.author_name })
