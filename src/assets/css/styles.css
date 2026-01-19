@@ -119,11 +119,19 @@ nav > ul {
 }
 
 .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   list-style: none;
   padding: 0;
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
+}
+
+.tags > li::after {
+  content: ','
+}
+
+.tags > li:last-child::after {
+  content: ''
 }
 
 .tags > p {
