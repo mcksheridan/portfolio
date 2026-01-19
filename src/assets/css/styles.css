@@ -70,7 +70,7 @@ button:focus {
   outline-offset: 2px;
 }
 
-nav > ul {
+.site-navigation > ul {
 	align-items: center;
 	display: flex;
 	flex-direction: row;
@@ -79,6 +79,32 @@ nav > ul {
 	list-style: none;
 	padding-inline: 0;
 	width: 100%;
+}
+
+.pagination {
+	display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  text-align: center;
+}
+
+.pagination > h2 {
+  font-size: 1em;
+  margin-block: 0;
+}
+
+.pagination > ul {
+  line-height: 2em;
+  list-style: none;
+  margin-block: 0.25em;
+  padding-inline: 0;
+}
+
+.pagination > span {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  width: 100%;
 }
 
 .skip-link {
@@ -163,4 +189,24 @@ pre {
 
 table td {
   vertical-align: top;
+}
+
+@media (min-width: 40rem) {
+  .pagination > ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
+
+  .pagination > ul.left-align {
+    justify-content: flex-start;
+  }
+
+  .pagination > ul.right-align {
+    justify-content: flex-end;
+  }
+
+  .pagination > ul.center {
+    justify-content: space-around;
+  }
 }
